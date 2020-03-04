@@ -20,3 +20,7 @@
 .App-link {
   color: #09d3ac;
 }
+.cus-img img{
+  height: 250px;
+  object-fit: cover;
+}

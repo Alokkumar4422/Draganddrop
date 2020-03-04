@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Example from './example'
+import { DndProvider } from 'react-dnd'
+import Backend from 'react-dnd-html5-backend'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DndProvider backend={Backend}>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark text-white mb-4 text-center py-3">
+          <div className="mx-auto d-table">
+            <p className="mb-0 text-center text-uppercase">Drag and drop</p>
+          </div>
+        </nav>
+        <Example />
+      </DndProvider>
     </div>
   );
 }
-
 export default App;
